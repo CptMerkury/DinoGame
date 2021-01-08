@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+.portrait {
+    width: 90%;
+    margin: 40% auto 0;
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    border: 1px solid crimson;
+    border-radius: 50px;
+    color: #3d3d3d;
+}
+
+@media all and (orientation: landscape) {
+    .portrait {
+        display: none;
+    }
+
+    .game {
+        width: 600px;
+        height: 250px;
+        margin: 60px auto 0;
+        border: 1px solid #2d2d2d;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .game_bg {
+        width: 1200px;
+        height: 100%;
+        background: url("img/bg.png") repeat-x;
+        animation: bgMov 1s infinite linear;
+        position: absolute;
+        left: 0;
+    }
+
+    @keyframes bgMov {
+        0% {
+            left: -100px;
+        }
+        100% {
+            left: -500px;
+        }
+    }
+
+    #dino {
+        width: 50px;
+        height: 50px;
+        background: url("img/dino.png") center center/cover no-repeat;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+    }
+
+    .jump {
+        animation: jump 0.7s ease-in-out;
+    }
+
+    @keyframes jump {
+        0% {
+            top: 150px;
+        }
+        50% {
+            top: 80px;
+        }
+        100% {
+            top: 150px;
+        }
+    }
+
+    #cactus {
+        width: 20px;
+        height: 50px;
+        background: url("img/cactus.png") center center/cover no-repeat;
+        position: absolute;
+        top: 150px;
+        left: 580px;
+        animation: cactusMov 1.5s infinite linear;
+    }
+
+    @keyframes cactusMov {
+        0% {
+            left: 580px;
+        }
+        100% {
+            left: -20px;
+        }
+    }
+}
+
